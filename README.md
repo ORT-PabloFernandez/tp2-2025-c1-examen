@@ -43,3 +43,31 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 ## Listado de endpoint
 
 -GET /api/movies?pageSize=[pageSize]&page=[page]
+-GET /api/sales/:id
+-GET /api/sales/total
+-GET /api/sales/customer/:email
+-PATCH /api/sales/:id/coupon
+-GET /api/sales/top-products?limit=5
+
+## Valores  utilizados para las pruebas
+
+:id => 5bd761dcae323e45a93ccff8
+email => se@nacwev.an, ib@ritodine.bn, bacuj@tecummec.mo, galvuhamo@popudhuv.td
+
+## Generación de token
+
+Para la generación del token, primeramente accederemos a la carpeta script de la siguiente forma.
+-cd src 
+-cd script
+Una vez dentro de la carpeta, ejecutaremos la siguiente linea dentro de la consola : 
+-node generateToken.js
+
+## Valores a utilizar en Postman
+
+-PATCH /api/sales/:id/coupon =>
+ body: 
+{
+    "couponUsed":true
+}
+
+
