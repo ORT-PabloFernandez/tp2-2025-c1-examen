@@ -55,7 +55,7 @@ export async function updateCouponValue(id, newValue){
 
     return true;
     } catch{
-
+        return false
     }
 }
 
