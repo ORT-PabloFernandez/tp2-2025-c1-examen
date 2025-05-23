@@ -82,6 +82,7 @@ export const updateCouponUsed = async (req, res) => {
     res.json(updated);
   } catch (error) {
     console.error("Error updating couponUsed:", error);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ message: "Internal server error." });
   }
+
 };
