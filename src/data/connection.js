@@ -1,9 +1,5 @@
 import { MongoClient } from "mongodb";
-const uri = process.env.MONGODB_URI;
-
-if(!uri){
-    throw new Error("❌ La variable de entorno MONGODB_URI no esta definida.");    
-}
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/";
 
 let client;
 let db;
@@ -13,7 +9,7 @@ export async function connectToDatabase(){
         try {
             client = new MongoClient(uri);
             await client.connect();
-            db = client.db("sample_mflix");
+            db = client.db("sample_supplies");
             console.log("✅ Conexión a MongoDB establecida");
         } catch (error) {
             console.error("❌  Error conectando a MongoDB", error.message);

@@ -40,6 +40,50 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 3. Realizar un push a tu repositorio
 4. Realizar un pull request a mi repositorio
 
-## Listado de endpoint
+## Listado de endpoints
 
--GET /api/movies?pageSize=[pageSize]&page=[page]
+Todos los endpoints requieren autenticación mediante token JWT en el header Authorization.
+
+### Ventas
+- GET /api/sales
+  - Descripción: Obtiene todas las ventas
+  - Parámetros query (opcionales):
+    - page: número de página (1 en adelante)
+    - pageSize: cantidad de elementos por página
+
+- GET /api/sales/:id
+  - Descripción: Obtiene una venta específica por su ID
+  - Parámetros URL:
+    - id: ID de la venta (MongoDB ObjectId)
+
+- GET /api/sales/total
+  - Descripción: Obtiene todas las ventas con el monto total calculado (price * quantity)
+  - Parámetros query (opcionales):
+    - page: número de página (1 en adelante)
+    - pageSize: cantidad de elementos por página
+
+- GET /api/sales/customer/:email
+  - Descripción: Obtiene todas las ventas de un cliente específico
+  - Parámetros URL:
+    - email: correo electrónico del cliente
+  - Parámetros query (opcionales):
+    - page: número de página (1 en adelante)
+    - pageSize: cantidad de elementos por página
+
+- PATCH /api/sales/:id/coupon
+  - Descripción: Actualiza el estado de uso del cupón de una venta
+  - Parámetros URL:
+    - id: ID de la venta (MongoDB ObjectId)
+  - Body (JSON):
+    ```json
+    {
+      "couponUsed": boolean
+    }
+    ```
+
+- GET /api/sales/top-products
+  - Descripción: Obtiene el ranking de productos más vendidos
+  - Parámetros query (opcionales):
+    - limit: cantidad de productos a retornar (default: 5)
+
+MONGODB_URI=mongodb://localhost:27017
