@@ -1,5 +1,17 @@
 {
   "type": "module",
+  "name": "tp2-template-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "nodemonConfig": {
+    "watch": ["server.js", "src/"],
+    "ext": "js,json",
+    "ignore": ["node_modules"]
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
@@ -7,17 +19,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.16.0",
-    "morgan": "^1.10.0"
-  },
-  "name": "tp2-template-api",
-  "version": "1.0.0",
-  "main": "temp.js",
-  "scripts": {
-    "test": "echo \"no test yet\"",
-    "start": "node server.js",
-    "dev": "node --watch server.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.10"
+  }
 }
