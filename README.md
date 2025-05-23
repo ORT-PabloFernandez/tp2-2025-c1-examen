@@ -43,3 +43,11 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 ## Listado de endpoint
 
 -GET /api/movies?pageSize=[pageSize]&page=[page]
+
+
+Endpoints hechos por Rodrigo Alcalde
+
+1- GET /api/sales/:id (Obtiene una venta especifica por ID)
+2- GET /api/sales/total (Devuelve todas las ventas, cada una con una nueva propiedad "total" calculada en price * quantity)
+3- GET /api/sales/customer/:email (Devuelve todas las ventas asociadas al cliente con el email especificado)
+4- PUT /api/sales/:id/couponUsed (Actualiza la propiedad "couponUsed" de una venta especifica, requiere que sea un booleano si no dara error)
