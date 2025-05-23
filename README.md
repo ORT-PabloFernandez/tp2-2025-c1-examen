@@ -43,3 +43,12 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 ## Listado de endpoint
 
 -GET /api/movies?pageSize=[pageSize]&page=[page]
+
+## Listado de endpoints Sales => necesitan token
+-GET /api/sales
+-GET /api/sales/total
+-GET /api/sales/top-products?limit=5
+-GET /api/sales/customer/:email
+-GET /api/sales/:id
+
+-PUT /api/sales/:id/coupon
