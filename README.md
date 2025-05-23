@@ -42,4 +42,8 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 
 ## Listado de endpoint
 
--GET /api/movies?pageSize=[pageSize]&page=[page]
+-GET /api/sales/:id (ventas por id de cliente)
+-GET /api/sales/total (ventas con valor total)
+-GET /api/sales/customer/:email (ventas por mail de usuario)
+-PATCH /api/sales/:id/coupon (editar el estado de un cupon - hay que mandarle el valor por el body)
+-GET /api/sales/top-products?limit=5 (top 5 productos mas vendidos)
