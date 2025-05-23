@@ -19,5 +19,13 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Es tu primer día en [tecnoshare.com](http://tecnoshare.com) luego de un intenso entrenamiento de 10 semanas por fin tenes la oportunidad de mostrar lo que aprendiste, y tu potencial como desarrollador backend en nodejs con express y mongodb.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beraldocamila/tp2-2025-c1-examen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Beraldocamila/tp2-2025-c1-examen/issues"
+  },
+  "homepage": "https://github.com/Beraldocamila/tp2-2025-c1-examen#readme"
 }
