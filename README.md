@@ -41,9 +41,16 @@ Si ya terminaste o son las 10:00 asegurate de seguir los siguientes pasos para l
 
 ## Listado de endpoint
 
--GET /api/sales?pageSize=[pageSize]&page=[page]
--GET /api/sales/:id
--GET /api/sales/total
--GET /api/sales/customer/:email
--GET /api/sales/top-products
--PATCH /api/sales/:id/coupon Body:{ couponUsed: boolean }
+- GET /api/sales?pageSize=[pageSize]&page=[page]
+
+- GET /api/sales/:id
+
+- GET /api/sales/total
+
+- GET /api/sales/customer/:email
+
+- GET /api/sales/top-products
+
+- PATCH /api/sales/:id/coupon  
+  Body: { couponUsed: boolean }
+
