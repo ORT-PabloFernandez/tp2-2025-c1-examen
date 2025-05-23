@@ -14,7 +14,7 @@
   "main": "temp.js",
   "scripts": {
     "test": "echo \"no test yet\"",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "dev": "node --watch server.js"
   },
   "author": "",
